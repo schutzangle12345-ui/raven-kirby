@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Raven Kirby | AI Startup Consultancy</title>
+    <meta name="description" content="Learn about Raven Kirby, the premier AI startup consultancy helping founders, CTOs, and venture studios bridge the gap between AI technical nuance and GTM success.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #0f172a;
+            --color-primary-dark: #000000;
+            --color-accent: #0ea5e9;
+            --color-background: #ffffff;
+            --color-surface: #f8fafc;
+            --color-text: #1e293b;
+            --color-text-muted: #64748b;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --section-padding: 100px 20px;
+            --container-width: 1100px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Navigation */
+        nav {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-text-muted);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--color-accent);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 20px 80px;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: var(--color-primary);
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            max-width: 650px;
+            margin-bottom: 40px;
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: var(--section-padding);
+            background-color: var(--color-surface);
+        }
+
+        .grid-two {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .section-tag {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--color-accent);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .content h2 {
+            font-size: 2.25rem;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+        }
+
+        /* Core Values */
+        .values-section {
+            padding: var(--section-padding);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .value-card {
+            padding: 32px;
+            border: 1px solid #f1f5f9;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            border-color: var(--color-accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .value-card h3 {
+            margin-bottom: 16px;
+            font-size: 1.25rem;
+        }
+
+        .value-card p {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+        }
+
+        /* Mission Statement */
+        .mission-box {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 80px;
+            border-radius: 24px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .mission-box h2 {
+            font-size: 2.5rem;
+            max-width: 800px;
+            margin: 0 auto 24px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: var(--section-padding);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 40px 40px;
+            border-top: 1px solid #f1f5f9;
+            background-color: #fff;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-col a {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid #f1f5f9;
+            color: var(--color-text-muted);
+            font-size: 0.85rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--color-text-muted);
+        }
+
+        @media (max-width: 968px) {
+            .grid-two, .values-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .mission-box {
+                padding: 40px 20px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            nav {
+                padding: 0 20px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <span style="font-weight:700;font-size:1.25rem">Raven Kirby</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="btn btn-primary">Start Building</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <span class="section-tag">Our Mission</span>
+                <h1>Moving AI startups from shiny demos to real businesses.</h1>
+                <p>Raven Kirby is a specialized AI startup consultancy built to solve the technical and commercial complexities that generic advisors ignore.</p>
+            </div>
+        </section>
+
+        <section class="story-section">
+            <div class="container">
+                <div class="grid-two">
+                    <div class="content">
+                        <span class="section-tag">The Story</span>
+                        <h2>Why we founded Raven Kirby</h2>
+                        <p>In the explosion of the AI era, we noticed a recurring pattern. Founders were building incredible prototypes, but they were hitting a wall when it came to enterprise-grade delivery, pricing models, and data strategy.</p>
+                        <p>Generic startup playbooks treat AI like any other SaaS. They ignore the infrastructure costs, the data compliance hurdles, and the nuance of usage-based pricing in 2025. We realized that AI founders didn't need more "strategy decks"—they needed a partner who understands the stack as well as the sales motion.</p>
+                    </div>
+                    <div class="content">
+                        <p>We launched Raven Kirby to bridge the gap between AI technical nuance and Go-To-Market execution. Our approach combines fractional advisory with tactical delivery. We don't just tell you to "scale"; we build the playbooks that make scaling possible without the founder being the bottleneck for every single delivery.</p>
+                        <p>Today, we serve solo founders, CTOs of seed-stage companies, and venture studios who need to de-risk their AI portfolios fast. We help you choose the right LLM stack, define your ICP, and experiment with pricing tiers that actually turn a profit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px;">
+                    <span class="section-tag">Our Values</span>
+                    <h2 style="font-size: 2.25rem;">The principles that guide our work</h2>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h3>Commercial Integrity</h3>
+                        <p>We move past the hype. If a product doesn't have a clear path to repeatable revenue, we help you pivot or kill it before you burn your seed round.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Technical Realism</h3>
+                        <p>Pretty decks don't solve latency issues or token costs. We design roadmaps that are technically workable from day one, focusing on build vs. buy vs. fine-tune decisions.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Founder Autonomy</h3>
+                        <p>Our goal is to build playbooks so you don't need us forever. We create the systems for pricing, packaging, and delivery that your team can run independently.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="mission-box">
+                <h2>Our Mission is to transform the chaotic frontier of AI development into a predictable engine for growth.</h2>
+                <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">By 2028, the difference between failed AI experiments and successful companies will be the strength of their data strategy and GTM playbooks.</p>
+            </div>
+        </section>
+
+        <section class="story-section" style="background: white;">
+            <div class="container">
+                <div class="grid-two">
+                    <div class="content">
+                        <span class="section-tag">Who We Serve</span>
+                        <h2>Specialized support for AI leaders</h2>
+                        <p>Whether you are a solo founder chasing your first lighthouse customer or a CTO at a Series A company trying to fix a leaking bucket in your usage-based pricing, we have been there.</p>
+                    </div>
+                    <div class="content">
+                        <ul style="margin-top: 20px;">
+                            <li style="margin-bottom: 15px; display: flex; align-items: start; gap: 10px;">
+                                <span style="color: var(--color-accent); font-weight: bold;">•</span>
+                                <span><strong>Idea Stage:</strong> Narrowing down a specific problem and ICP to avoid the "general AI" trap.</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: start; gap: 10px;">
+                                <span style="color: var(--color-accent); font-weight: bold;">•</span>
+                                <span><strong>Pre-Seed/Seed:</strong> Shaping offers and founding packages that lead to repeatable sales.</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: start; gap: 10px;">
+                                <span style="color: var(--color-accent); font-weight: bold;">•</span>
+                                <span><strong>Post-PMF:</strong> Scaling delivery and automating workflows so you can grow without linear headcount.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 style="font-size: 2.5rem; margin-bottom: 24px;">Ready to build a real AI business?</h2>
+                <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 40px;">Stop chasing shiny demos. Let's build a roadmap that works for your tech, your team, and your bottom line.</p>
+                <a href="contact.html" class="btn btn-primary" style="padding: 16px 40px; font-size: 1rem;">Book a Strategy Call</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <span style="font-weight:700;font-size:1.25rem">Raven Kirby</span>
+                    </a>
+                    <p style="font-size: 0.9rem; color: var(--color-text-muted); max-width: 250px;">
+                        Specialized AI startup consultancy for growth, GTM, and technical strategy.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="#">GTM Strategy</a>
+                    <a href="#">Technical Advisory</a>
+                    <a href="#">Pricing Strategy</a>
+                    <a href="#">Founder Coaching</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:hello@pezap.cc">hello@pezap.cc</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Raven Kirby. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
